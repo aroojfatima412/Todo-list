@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:
+        linear-gradient(
+            rgba(35, 29, 18, 0.38),
+            rgba(35, 29, 18, 0.50)
+        ),
+        url("task.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+background-image: linear-gradient(rgba(236, 238, 183, 0.7), rgba(248, 248, 117, 0.7)), 
+                    url('task.avif');
+  background-size: cover;
+  background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    background: rgba(251, 223, 138, 0.94);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(12px);
+}
+
+h1 {
+    text-align: center;
+    color: #75521e;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #a18454;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.input-section input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 18px;
+    border: 2px solid #ead9ae;
+    border-radius: 12px;
+    background: #fffdf6;
+    font-size: 15px;
+    outline: none;
+    color: #594323;
+    transition: 0.3s;
+}
+
+.input-section input:focus {
+    border-color: #c99b36;
+    box-shadow: 0 0 10px rgba(201, 155, 54, 0.2);
+}
+
+#addBtn {
+    background: linear-gradient(
+        135deg,
+        #e6b94f,
+        #c99528
+    );
+
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px rgba(180, 130, 35, 0.25);
+}
+
+#addBtn:hover {
+    background: #b7831f;
+    transform: translateY(-2px);
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background: #f4e8c9;
+    color: #80612b;
+    padding: 15px 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#todoList {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 12px;
+    margin-bottom: 12px;
+    background: #fffdf7;
+    border: 1px solid #f0e3c4;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(120, 90, 30, 0.06);
+    transition: 0.3s;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(120, 90, 30, 0.12);
+}
+
+.todo-item input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    accent-color: #bd922f;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    color: #59472b;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #b5a98f;
+}
+
+.actions {
+    display: flex;
+    gap: 7px;
+}
+
+.edit-btn {
+    background: #d6a943;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background: #b88a29;
+}
+
+.delete-btn {
+    background: #bd745b;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #a44d37;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #aa9162;
+    padding: 25px 10px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+        background-attachment: scroll;
+    }
+
+    .container {
+        padding: 23px 17px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    .task-info {
+        font-size: 12px;
+    }
+
+    .todo-item {
+        flex-wrap: wrap;
+    }
+
+    .actions {
+        margin-left: auto;
+    }
+}
